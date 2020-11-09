@@ -1,0 +1,22 @@
+{
+  "name": "apiweding",
+  "version": "1.0.0",
+  "description": "wo mail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismailmochm/apiweding.git"
+  },
+  "keywords": [
+    "apiwedingnodejs"
+  ],
+  "author": "ismail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ismailmochm/apiweding/issues"
+  },
+  "homepage": "https://github.com/ismailmochm/apiweding#readme"
+}
