@@ -5,7 +5,7 @@ const conn = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'',
-    database:'db_wedding',
+    database:'api_cikal',
     port: '3306'
 });
 
