@@ -1,18 +1,15 @@
-import express from 'express';
-import { urlencoded, json } from 'body-parser';
-
-import morgan from 'morgan';
+const express = require('express');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const app = express();
-import cors from 'cors';
 
 //parse application/json
-app.use(urlencoded({extended: true}));
-app.use(json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use(cors());
 
 //panggil routes
-import routes from './routes';
+var routes = require('./routes');
 routes(app);
 
 //daftarkan menu routes dari index
