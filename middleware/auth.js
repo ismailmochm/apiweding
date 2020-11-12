@@ -8,17 +8,17 @@ var ip = require('ip');
 
 //controller register
 exports.register = function(req,res) {
-    var post = [
-        username = req.body.username,
-        email = req.body.email,
-        nohp = req.body.nohp,
-        password = md5(req.body.password),
-        role = req.body.role,
-        tanggal_daftar = new Date(),
-    ]
+    var post = {
+        username : req.body.username,
+        email : req.body.email,
+        // nohp : req.body.nohp,
+        password : md5(req.body.password),
+        role : req.body.role,
+        tanggal_daftar : new Date(),
+    }
     
         //cek email
-        var query = "SELECT email FROM ?? WHERE ??";
+        var query = "SELECT email FROM ?? WHERE ??=?";
         var table = ["users", "email", post.email];
 
         query = mysql.format(query,table);
@@ -44,7 +44,7 @@ exports.register = function(req,res) {
                             }
                         });
                     } else {
-                        response.ok("email sudah terdaftar!!");
+                        response.ok("email sudah terdaftar!!", res);
                     }
                 }
             });
